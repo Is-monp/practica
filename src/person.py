@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Persona(ABC):
     def __init__(self, nombre):
         self._nombre = nombre
@@ -8,7 +9,7 @@ class Persona(ABC):
     def nombre(self):
         return self._nombre
     
-class jugador(Persona):
+class Jugador(Persona):
     def __init__(self, nombre,sueldo, juegos):
         super().__init__(nombre)
         self.__sueldo = sueldo

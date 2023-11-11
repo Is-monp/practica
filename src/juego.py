@@ -1,5 +1,6 @@
 from ast import List
 from person import Jugador, Juez
+from typing import Optional
 
 class Juego:
     def __init__(self,jugador:"Jugador",juez:"Juez",juego:"Juego") -> None:
@@ -9,7 +10,14 @@ class Juego:
         self.__juego_previo_1 = juego
         self.__juego_previo_2 = juego
         self.__juego_siguiente = juego
-        self.__set: List["Set"] = []
+        self.__sets: List["Set"] = []
+    
+    def add_sets(self, set1:"Set", set2:"set", set3:Optional["set"]=None) -> None:
+        self.__sets.append(set1)
+        self.__sets.append(set2)
+        if set3 is not None:
+            self.__sets.append(set3)
+            
 
 class Set:
     def __init__(self,puntos1:int, puntos2:int) -> None:

@@ -11,7 +11,7 @@ class Jugador(Persona):
         self.__juegos: list["Juego"]=[]
     
 class Juez(Persona):
-    def __init__(self, nombre, edad, juegos):
+    def __init__(self, nombre:str, edad:int) -> None:
         super().__init__(nombre)
         self.__edad = edad
         self.__juegos: list["Juego"]=[]

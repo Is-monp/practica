@@ -1,12 +1,17 @@
 from ast import List
 from person import Juez,Jugador
+from juego import Juego
 
 class Campeonato:
     def __init__(self) -> None:
         self.__juegos: List["Juego"] = []
 
-    def add_juego(self,juego:"Juego"):
-        self.__juego_siguiente = juego
+    def add_juego(self,juego:Juego):
+        self.__juegos.append(juego)
+    
+    def get_juego(self,indice):
+        return self.__juegos[indice]
+
     
 
 

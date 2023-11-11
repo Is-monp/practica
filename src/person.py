@@ -39,4 +39,4 @@ class Juez(Persona):
         return f"Nombre: {self.nombre}, edad: {self.edad}"
 
     
-
+#fghjikop´+

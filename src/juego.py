@@ -12,15 +12,15 @@ class Juego:
         self.__juego_siguiente = "Juego"
         self.__sets: List["Set"] = []
 
-    def prueba(self):
-        return 0
+        self.asignar_juegos(self.__jugador_1)
+        self.asignar_juegos(self.__jugador_2)
 
         if self.__jugador_1 is None:
             self.__jugador_1 = self.asignar_ganador(juego_previo_1)
             self.__jugador_2 = self.asignar_ganador(juego_previo_2)
 
-        self.asignar_juegos(self.__jugador_1)
-        self.asignar_juegos(self.__jugador_2)
+    def prueba(self):
+        return 0
 
     def asignar_ganador(self,juego):
         puntos1 = 0

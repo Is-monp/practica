@@ -12,6 +12,7 @@ class Juego:
         self.__juego_siguiente = "Juego"
         self.__sets: List["Set"] = []
 
+
         self.asignar_juegos(self.__jugador_1)
         self.asignar_juegos(self.__jugador_2)
 
@@ -63,6 +64,9 @@ class Juego:
                 contador = contador+1
 
         return contador
+    
+    def prueba01(self):
+        return 0
 
     def __repr__(self) -> str:
         return f'Report({self.__jugador_1.nombre},{self.__jugador_2.nombre},{self.__juez.nombre},{self.__sets})'

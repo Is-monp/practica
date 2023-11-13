@@ -1,4 +1,7 @@
 # Imports
+from core import LigaTenis, Campeonato
+from person import Jugador, Juez
+from juego import Juego, Set
 
 def main() -> None:
     liga = LigaTenis()

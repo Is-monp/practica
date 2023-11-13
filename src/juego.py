@@ -11,6 +11,9 @@ class Juego:
         self.__juego_siguiente = juego
         self.__set: List["Set"] = []
 
+    def prueba(self):
+        return 0
+
 class Set:
     def __init__(self,puntos1:int, puntos2:int) -> None:
         self.__puntos_jugador_1 = puntos1

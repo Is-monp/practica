@@ -22,7 +22,7 @@ class Juego:
     def asignar_ganador(self,juego):
         puntos1 = 0
         puntos2 = 0
-        for set in juego.__sets:
+        for set in juego.get_set():
             if set.get_p1() > set.get_p2():
                 puntos1 = puntos1+1
             else:
@@ -38,6 +38,8 @@ class Juego:
     def asignar_juegos(self,jugador):
         jugador.add_juego(self)
 
+    def get_set(self):
+        return self.__sets
     
     def add_sets(self, set1:"Set", set2:"set", set3:Optional["set"]=None) -> None:
         self.__sets.append(set1)
@@ -56,7 +58,7 @@ class Juego:
         for set in self.__sets:
             if indice == set.ganador_set():
                 contador = contador+1
-        
+
         return contador
 
     def __repr__(self) -> str:

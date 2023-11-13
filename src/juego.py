@@ -47,7 +47,7 @@ class Juego:
         if set3 is not None:
             self.__sets.append(set3)
     
-    def sets_ganados_juego(self, jugador:"Jugador"):
+    def sets_ganados_juego(self, jugador):
         if jugador == self.__jugador_1:
             indice = "Jugador1"
         else:

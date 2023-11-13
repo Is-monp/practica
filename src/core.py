@@ -11,10 +11,18 @@ class Campeonato:
     
     def get_juego(self,indice):
         return self.__juegos[indice]
-
     
-
-
+    def get_juegos(self,indice):
+        return self.__juegos
+    
+    def show_resumen(self):
+        ganador = ""
+        for juego in self.__juegos:
+            print(juego)
+            ganador = juego.asignar_ganador(juego)
+            print("Ganador: ", ganador.nombre)
+        print("El ganador del campeonato es: ",ganador.nombre)
+    
 
 class LigaTenis:
     def __init__(self) -> None:
@@ -31,7 +39,6 @@ class LigaTenis:
     def add_campeonato(self,campeonato:Campeonato):
         self.__campeonatos.append(campeonato)
 
-
     def get_jugador(self,indice):
         return self.__jugadores[indice]
     
@@ -40,3 +47,17 @@ class LigaTenis:
     
     def get_campeonato(self,indice:int):
         return self.__campeonatos[indice]
+    
+    def calc_sets_ganados_jugadores_campeonato(self,indice):
+        sets_ganados = 0
+        for jugador in self.__jugadores:
+            for juego in jugador.get_juegos():
+                sets_ganados = sets_ganados+juego.sets_ganados_juego(jugador)
+            print("El jugador ", jugador.nombre, "ganó ",sets_ganados, " en el campeonato")
+            sets_ganados=0
+        
+    
+            
+
+
+    
